@@ -1,0 +1,3 @@
+/Users/szymonhunek/Projects/00000/konsolowacpp/cmake-build-debug/CMakeFiles/konsolowacpp.dir
+/Users/szymonhunek/Projects/00000/konsolowacpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/szymonhunek/Projects/00000/konsolowacpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
