@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/szymonhunek/Projects/egzaminy-inf04/inf04-2022-czerwiec/mobilna/mobilna/obj/Debug/net9.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/szymonhunek/Projects/egzaminy-inf04/inf04-2022-czerwiec/mobilna/mobilna/bin/Debug/net9.0-maccatalyst/maccatalyst-arm64/mobilna.app
