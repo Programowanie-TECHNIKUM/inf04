@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    Shell.NavBarIsVisible="False"
+    x:Class="mobilna.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="White" Padding="0,20,0,0">
+            <Label
+                FontSize="Large"
+                Margin="10"
+                Text="Domek w górach"
+                TextColor="#808080" />
+
+            <Image
+                Aspect="Fill"
+                HeightRequest="185"
+                HorizontalOptions="FillAndExpand"
+                Source="obraz.jpg"
+                VerticalOptions="FillAndExpand" />
+
+
+            <StackLayout
+                BackgroundColor="Teal"
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal">
+                <Button
+                    BackgroundColor="#008080"
+                    Clicked="dodaj"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Polub" />
+                <Button
+                    BackgroundColor="#008080"
+                    Clicked="usun"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Usuń" />
+                <Button
+                    BackgroundColor="#008080"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Zapisz" />
+            </StackLayout>
+
+            <Label
+                HorizontalOptions="EndAndExpand"
+                Text="0 polubień"
+                TextColor="#808080"
+                VerticalOptions="Center"
+                x:Name="polubienialabel" />
+
+            <BoxView
+                BackgroundColor="Gray"
+                HeightRequest="1"
+                HorizontalOptions="FillAndExpand" />
+
+            <Label
+                FontAttributes="Bold"
+                Text="Opis"
+                TextColor="#808080" />
+            <Label Text="Odwiedź komfortowy domek w Sudetach, blisko do szlaków turystycznych" TextColor="#808080" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
