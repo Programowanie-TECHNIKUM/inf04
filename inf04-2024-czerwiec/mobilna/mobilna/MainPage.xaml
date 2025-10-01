@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="mobilna.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout
+            BackgroundColor="#F5F5DC"
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                BackgroundColor="#A52A2A"
+                Padding="0,10,0,10"
+                Text="Gra w kości. Autor 0000000"
+                TextColor="White" />
+            <Button
+                Background="Chocolate"
+                BackgroundColor="#D2691E"
+                Clicked="RollButton"
+                FontSize="14"
+                HeightRequest="40"
+                Text="RZUĆ KOŚCMI"
+                WidthRequest="120" />
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="60"
+                    Source="question.jpg"
+                    WidthRequest="60"
+                    x:Name="image1" />
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="60"
+                    Source="question.jpg"
+                    WidthRequest="60"
+                    x:Name="image2" />
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="60"
+                    Source="question.jpg"
+                    WidthRequest="60"
+                    x:Name="image3" />
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="60"
+                    Source="question.jpg"
+                    WidthRequest="60"
+                    x:Name="image4" />
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="60"
+                    Source="question.jpg"
+                    WidthRequest="60"
+                    x:Name="image5" />
+            </HorizontalStackLayout>
+            <Label
+                HorizontalOptions="Center"
+                Text="Wynik tego losowania: 0"
+                VerticalOptions="Center"
+                x:Name="punktyLabel" />
+            <Label
+                HorizontalOptions="Center"
+                Text="Wynik: 0"
+                VerticalOptions="Center"
+                x:Name="wynikGryLabel" />
+
+            <Button
+                BackgroundColor="#D2691E"
+                Clicked="resetGry"
+                FontSize="14"
+                HeightRequest="40"
+                Text="RESETUJ WYNIK"
+                WidthRequest="120" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp1.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+                <Label
+                    Background="#558B2F"
+                    FontAttributes="Bold"
+                    FontSize="28"
+                    HorizontalOptions="Fill"
+                    HorizontalTextAlignment="Center"
+                    Text="Właściwości czcionki"
+                    TextColor="White" />
+
+                <Label
+                    FontSize="20"
+                    HorizontalOptions="Fill"
+                    Text="Rozmiar: 20"
+                    TextColor="Gray"
+                    x:Name="FontSizeLabel" />
+
+                <Slider
+                    HorizontalOptions="Fill"
+                    Maximum="40"
+                    Minimum="0"
+                    Value="20"
+                    ValueChanged="FontSizeSlider_ValueChanged"
+                    x:Name="FontSizeSlider" />
+
+                <Label
+                    FontSize="20"
+                    HorizontalOptions="Fill"
+                    HorizontalTextAlignment="Center"
+                    Text="Dzień dobry"
+                    TextColor="Gray"
+                    x:Name="QuoteLabel" />
+
+                <Button
+                    Background="#558B2F"
+                    BackgroundColor="White"
+                    Clicked="OnNextQuoteClicked"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="&gt;&gt;"
+                    TextColor="Black"
+                    WidthRequest="100" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </ScrollView>
+
+</ContentPage>
