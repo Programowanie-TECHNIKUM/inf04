@@ -7,39 +7,47 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
-
     private void cryptEvent(object sender, EventArgs e)
     {
-        int inputKey = int.Parse(key.Text);
-        string inputText = value.Text;
+        if (!int.TryParse(key.Text, out int inputKey)) return;
+
+        string inputText = value?.Text ?? string.Empty;
 
         string letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string allowedSigns = "!@#$%^&*()_+}{|\":?><,/;'[]\\=-`~ ";
         string result = "";
 
-        bool flag = false;
+        inputKey = inputKey % letters.Length;
+        if (inputKey < 0)
+        {
+            inputKey += letters.Length;
+        }
 
-        for(int i = 0; i < inputText.Length; i++)
+        for (int i = 0; i < inputText.Length; i++)
         {
             char literka = inputText[i];
-            int index = letters.IndexOf(literka);
-
-
-            int newIndex = (index + inputKey) % letters.Length;
-
-            if (newIndex < 0)
+            
+            if (allowedSigns.IndexOf(literka) != -1)
             {
-                newIndex += letters.Length;
-                flag = true;
+                result += literka;
+                continue;
             }
+
+            int index = letters.IndexOf(literka);
+            
+            if (index == -1)
+            {
+                result += literka;
+                continue;
+            }
+            
+            int newIndex = (index + inputKey) % letters.Length;
 
             result += letters[newIndex];
         }
 
-        if (flag)
-        {
-            result.Reverse();
-        }
-
         encryptedValueLabel.Text = result;
     }
+
+
 }
